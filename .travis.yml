@@ -1,0 +1,14 @@
+sudo: true
+
+dist: xenial
+arch:
+  - ppc64le
+language: c++
+
+env:
+  global:
+    - PREFIX=/usr/local
+    
+script:
+  - ./configure -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX 
+  - make install
